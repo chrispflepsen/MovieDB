@@ -14,9 +14,7 @@ The MovieDB Demo App is a sample mobile application designed to showcase popular
 
 - **SwiftUI:** The app's user interface is built using SwiftUI, Apple's modern framework for building user interfaces across all Apple platforms.
 
-- **API Integration:** The app integrates with a movie database API to fetch the list of popular movies and their details.
-
-- **Navigation:** Navigation is handled through SwiftUI's navigation components, allowing users to navigate between the list of movies and the movie detail view seamlessly.
+- **RestySwift:** 
 
 ## How to Use
 
