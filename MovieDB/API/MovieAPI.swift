@@ -23,8 +23,10 @@ private struct MovieDefaults: RequestDefaults {
         ]}
 }
 
+/// A struct representing the configuration for the movie API.
 struct MovieAPI: API {
     var baseUrl: String { "https://api.themoviedb.org/3" }
     var defaults: RequestDefaults? = MovieDefaults()
     var decoder: JSONDecoder { .movieAPIDecoder }
+    var encoder: JSONEncoder { .movieAPIEncoder }
 }

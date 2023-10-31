@@ -7,16 +7,13 @@
 
 import Foundation
 
+/// A struct representing the response for movie credits, including cast members.
 struct CreditsResponse: Decodable {
     let id: Int
     let cast: [CastMember]
-
-    static var dummy: CreditsResponse? {
-        let credits = try? AssetLoader.loadPreviewContent(name: "Credits", type: CreditsResponse.self)
-        return credits
-    }
 }
 
+/// A struct representing a cast member in a movie or TV show.
 struct CastMember: Identifiable, Decodable {
     let adult: Bool
     let gender: Int

@@ -7,35 +7,33 @@
 
 import SwiftUI
 
+/// A `View` that displays extended details for a movie.
 struct MovieDetailView: View {
 
     let movie: Movie
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading,
+               spacing: Constants.spacing) {
             HStack {
                 Spacer()
-                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)")) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(maxWidth: 250)
-
-                } placeholder: {
-                    Image(systemName: "film")
-                }
+                MoviePosterView(posterSize: .detail(movie))
+                    .frame(width: Constants.Images.detailSize.width,
+                                 height: Constants.Images.detailSize.height)
                 Spacer()
             }
             Text(movie.title)
-                .font(.title3)
-                .padding(.horizontal, 16)
+                .font(.title2)
+                .padding(.horizontal, Constants.padding)
             Text(movie.overview)
                 .font(.footnote)
-                .padding(.horizontal, 16)
+                .padding(.horizontal, Constants.padding)
+//            CastView(cast: <#T##[CastMember]#>)
+            Spacer()
         }
     }
 }
 
 #Preview {
-    MovieDetailView(movie: (MovieResult.popular?.results.first)!)
+    MovieDetailView(movie: .popular.first!)
 }

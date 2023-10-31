@@ -9,9 +9,7 @@ import Foundation
 
 extension CastMember {
     static var castList: [CastMember] {
-        guard let credits = try? AssetLoader.loadPreviewContent(name: "Credits", type: CreditsResponse.self) else {
-            return []
-        }
-        return credits.cast
+        let credits = try? AssetLoader.loadPreviewContent(name: "Credits", type: CreditsResponse.self)
+        return credits?.cast ?? []
     }
 }

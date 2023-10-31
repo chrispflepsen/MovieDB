@@ -10,25 +10,32 @@ import SwiftData
 
 @main
 struct MovieDBApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                MovieListView()
+                MovieListContainerView()
             }
         }
-        .modelContainer(sharedModelContainer)
+    }
+}
+
+struct MovieSplitView: View {
+
+    // TODO: Configure a split view to work on iPad, the environment var will break DI and previews
+    @Environment(\.selectedMovie) var selectedMovie: Movie?
+
+    var body: some View {
+        NavigationSplitView {
+            MovieListContainerView()
+        } detail: {
+            if let selectedMovie = selectedMovie {
+                MovieDetailView(movie: selectedMovie)
+            } else {
+                Text("Please select a movie")
+                    .font(.title)
+            }
+
+        }
+
     }
 }
