@@ -12,7 +12,7 @@ import SwiftData
 struct MovieDBApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Item.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,9 @@ struct MovieDBApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                MovieListView()
+            }
         }
         .modelContainer(sharedModelContainer)
     }
