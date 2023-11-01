@@ -1,7 +1,9 @@
 # MovieDB
 The MovieDB Demo App is a sample mobile application designed to showcase popular movies and provide detailed information about the selected movie. 
 
-![Movie list screenshot](/resources/List-Screenshot.png) ![Movie detail screenshot](/resources/Detail-Screenshot.png)
+| Movie List                    | Movie Detail                    |
+| ----------------------------- | ------------------------------- |
+| ![Movie list screenshot](/resources/List-Screenshot.png) | ![Movie detail screenshot](/resources/Detail-Screenshot.png) |
 
 ## API Key
 
