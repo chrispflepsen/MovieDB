@@ -27,10 +27,8 @@ struct MovieListContainerView: View {
                 }
             }
         }
+        .navigationBarTitleDisplayMode(.large)
         .navigationTitle("Popular Movies")
-        .task {
-            await movieList.fetchMovies()
-        }
     }
 }
 

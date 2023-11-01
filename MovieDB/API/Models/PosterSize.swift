@@ -12,14 +12,14 @@ enum PosterSize {
     case thumbnail(Movie)
     case detail(Movie)
     case full(Movie)
-
+    
     var movie: Movie {
         switch self {
         case .thumbnail(let movie), .detail(let movie), .full(let movie):
             return movie
         }
     }
-
+    
     /// The path segment for this sized poster
     var path: String {
         switch self {

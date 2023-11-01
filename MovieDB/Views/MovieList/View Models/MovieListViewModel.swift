@@ -30,14 +30,17 @@ class MovieListViewModel: MovieListProvider {
 
     init(networkConnector: NetworkConnector = .shared) {
         self.networkConnector = networkConnector
+        Task {
+            await fetchMovies()
+        }
     }
 
     func fetchMovies() async {
         self.state = .loading
         do {
             let response = try await api.perform(request: PopularMoviesRequest(),
-                                               connector: networkConnector)
-            self.state = .result(response.results)
+                                                 connector: networkConnector)
+            self.state = .result(response.results.filter { $0.adult == false })
         } catch let error {
             self.state = .error(error)
         }
