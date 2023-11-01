@@ -11,9 +11,9 @@ The MovieDB Demo App is a sample mobile application designed to showcase popular
 
 ## API Key
 
-### TMDB.json Provided {#file-provided}
+### File Provided
 
-If you are provided with a TMDB.json file you will need to drag and drop it on the `API` set of the `Assets.xcassets` asset catalog. See image below.
+If you are provided with a `TMDB.json` file you will need to drag and drop it on the `API` set of the `Assets.xcassets` asset catalog. See image below.
 
 ![Drag and Drop API Key instructions](/resources/api-key-instructions.png)
 
