@@ -23,7 +23,7 @@ final class MovieListViewModelTests: XCTestCase {
         }
     }
 
-    func testError() async throws {
+    func testFetchMoviesError() async throws {
         let viewModel = MovieListViewModel(connector: .single(.error(PreviewError.generic)))
         await viewModel.fetchMovies()
         switch viewModel.state {

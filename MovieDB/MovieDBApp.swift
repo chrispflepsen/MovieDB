@@ -18,24 +18,3 @@ struct MovieDBApp: App {
         }
     }
 }
-
-struct MovieSplitView: View {
-
-    // TODO: Configure a split view to work on iPad, the environment var will break DI and previews
-    @Environment(\.selectedMovie) var selectedMovie: Movie?
-
-    var body: some View {
-        NavigationSplitView {
-            MovieListContainerView()
-        } detail: {
-            if let selectedMovie = selectedMovie {
-                MovieDetailView(movie: selectedMovie)
-            } else {
-                Text("Please select a movie")
-                    .font(.title)
-            }
-
-        }
-
-    }
-}

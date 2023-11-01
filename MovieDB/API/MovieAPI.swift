@@ -15,10 +15,10 @@ struct APIConfig: Codable {
 
 private struct MovieDefaults: RequestDefaults {
     var parameters: Parameters?
-    var headers: Headers? { guard let jsonAsset = NSDataAsset(name: "API") else { return [:] }
-        let apiKey = (try? JSONDecoder().decode(APIConfig.self, from: jsonAsset.data).apiKey) ?? ""
+    var headers: Headers? {
+        guard let apiConfig = try? AssetLoader.loadJSONAsset(name: "API", type: APIConfig.self) else { return [:] }
         return [
-            "Authorization": "Bearer \(apiKey)",
+            "Authorization": "Bearer \(apiConfig.apiKey)",
             "accept": "application/json"
         ]}
 }

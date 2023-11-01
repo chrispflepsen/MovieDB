@@ -21,7 +21,7 @@ protocol CreditsProvider: Observable {
 
 @Observable
 class CreditsViewModel: CreditsProvider {
-    var creditsState: CreditViewState = .loading
+    private(set) var creditsState: CreditViewState = .loading
     private(set) var movie: Movie
 
     private let api = MovieAPI()

@@ -44,7 +44,6 @@
 		FBE0C3402AF16CE200FE76F1 /* MoviePosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C33F2AF16CE200FE76F1 /* MoviePosterView.swift */; };
 		FBE0C3432AF1761400FE76F1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FBE0C3422AF1761400FE76F1 /* Kingfisher */; };
 		FBE0C3452AF1858A00FE76F1 /* PosterSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C3442AF1858A00FE76F1 /* PosterSize.swift */; };
-		FBE0C3472AF19AA900FE76F1 /* EnvironmentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C3462AF19AA900FE76F1 /* EnvironmentExtensions.swift */; };
 		FBE0C34A2AF1AA8D00FE76F1 /* MovieDB.docc in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C3492AF1AA8C00FE76F1 /* MovieDB.docc */; };
 		FBE0C34C2AF203FA00FE76F1 /* CastMemberScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C34B2AF203FA00FE76F1 /* CastMemberScrollView.swift */; };
 		FBE0C34F2AF2051A00FE76F1 /* CreditsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C34E2AF2051A00FE76F1 /* CreditsViewModel.swift */; };
@@ -115,7 +114,6 @@
 		FBE0C33D2AF166A000FE76F1 /* CastMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberView.swift; sourceTree = "<group>"; };
 		FBE0C33F2AF16CE200FE76F1 /* MoviePosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePosterView.swift; sourceTree = "<group>"; };
 		FBE0C3442AF1858A00FE76F1 /* PosterSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterSize.swift; sourceTree = "<group>"; };
-		FBE0C3462AF19AA900FE76F1 /* EnvironmentExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentExtensions.swift; sourceTree = "<group>"; };
 		FBE0C3492AF1AA8C00FE76F1 /* MovieDB.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MovieDB.docc; sourceTree = "<group>"; };
 		FBE0C34B2AF203FA00FE76F1 /* CastMemberScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastMemberScrollView.swift; sourceTree = "<group>"; };
 		FBE0C34E2AF2051A00FE76F1 /* CreditsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewModel.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 			children = (
 				FBE0C30C2AF09A4A00FE76F1 /* JSONDecoderExtensions.swift */,
 				FBE0C32C2AF156E300FE76F1 /* JSONEncoderExtensions.swift */,
-				FBE0C3462AF19AA900FE76F1 /* EnvironmentExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -539,7 +536,6 @@
 				FBE0C3242AF14CBE00FE76F1 /* MoviePreviewExtensions.swift in Sources */,
 				FBE0C34C2AF203FA00FE76F1 /* CastMemberScrollView.swift in Sources */,
 				FBE0C3382AF1626C00FE76F1 /* LoadingView.swift in Sources */,
-				FBE0C3472AF19AA900FE76F1 /* EnvironmentExtensions.swift in Sources */,
 				FBE0C3172AF0AD7300FE76F1 /* Cast.swift in Sources */,
 				FBE0C3222AF14C8300FE76F1 /* Movie.swift in Sources */,
 				FBE0C3022AF0917A00FE76F1 /* AssetLoader.swift in Sources */,

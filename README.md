@@ -1,14 +1,6 @@
 # MovieDB
 The MovieDB Demo App is a sample mobile application designed to showcase popular movies and provide detailed information about selected movies. This app allows users to explore a curated list of popular movies and learn more about their details.
 
-## Documentation
-
-Full documentation available here: [Documentation](https://chrispflepsen.github.io/MovieDB/documentation/moviedb/)
-
-## [RestySwift](https://github.com/chrispflepsen/RestySwift)
-
-RestySwift is a barebones protocol based package built on top of URLSession for JSON based REST API(s). It was used in this project for all networking and stubbing of network requests.
-
 ## API Key
 
 ### File Provided
@@ -32,3 +24,17 @@ Otherwise to use this app, you will need an API key from [The Movie Database](ht
 }
 ```
 6. Follow the [File Provided instructions](#file-provided)
+
+## Dependencies
+
+### [RestySwift](https://github.com/chrispflepsen/RestySwift)
+
+RestySwift is a barebones protocol based package built on top of URLSession for JSON based REST API(s)
+
+### [SwiftLint](https://github.com/realm/SwiftLint)
+
+A tool to enforce Swift style and conventions
+
+### [Kingfisher](https://github.com/onevcat/Kingfisher)
+
+Kingfisher is a powerful, pure-Swift library for downloading and caching images from the web

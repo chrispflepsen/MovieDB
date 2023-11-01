@@ -23,7 +23,7 @@ protocol MovieListProvider: Observable {
 
 @Observable
 class MovieListViewModel: MovieListProvider {
-    var state: MovieListState = .loading
+    private(set) var state: MovieListState = .loading
 
     private let api = MovieAPI()
     private let connector: NetworkConnector

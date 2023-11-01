@@ -10,7 +10,7 @@ import SwiftUI
 /// A `View` for displaying a list of movies.
 struct MovieListView: View {
 
-    var movies: [Movie]
+    let movies: [Movie]
 
     var body: some View {
         List(movies) { movie in

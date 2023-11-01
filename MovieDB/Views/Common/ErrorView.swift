@@ -27,7 +27,7 @@ struct ErrorView: View {
 
     var body: some View {
         Button(action: {
-            self.action()
+            action()
         }, label: {
             VStack {
                 Image(systemName: "xmark.octagon")
