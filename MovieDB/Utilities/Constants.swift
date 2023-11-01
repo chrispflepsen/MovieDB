@@ -20,10 +20,17 @@ enum Constants {
 
         static let thumbnailSize = CGSize(width: 50, height: 75)
         static let detailSize = CGSize(width: 250, height: 375)
+        static let iconSize = CGSize(width: 50, height: 50)
     }
 
     enum Animation {
         /// 0.25
         static let duration = 0.25
+    }
+
+    enum Text {
+        static let movieListTitle = "Popular Movies"
+        static let castTitle = "Cast"
+        static let defaultError = "Something went wrong\nTap to retry"
     }
 }

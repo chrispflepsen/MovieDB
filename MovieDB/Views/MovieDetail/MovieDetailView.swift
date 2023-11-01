@@ -14,8 +14,6 @@ struct MovieDetailView: View {
 
     var body: some View {
         List {
-//            VStack(alignment: .leading,
-//                   spacing: Constants.spacing) {
             Section {
                 HStack {
                     Spacer()
@@ -38,7 +36,7 @@ struct MovieDetailView: View {
             Section(content: {
                 CastView(movie: movie)
             }, header: {
-                Text("Cast")
+                Text(Constants.Text.castTitle)
                     .font(.title3)
             })
             .listRowSeparator(.hidden)

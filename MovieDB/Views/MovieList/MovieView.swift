@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-/// A `View` that displays a movie within a list, typically ``MovieListView``
+/// A `View` that displays a  single movie within a list, typically ``MovieListView``
 struct MovieView: View {
 
     let movie: Movie
