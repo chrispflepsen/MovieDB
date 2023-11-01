@@ -32,8 +32,9 @@ struct ErrorView: View {
             VStack {
                 Image(systemName: "xmark.octagon")
                     .resizable()
-                    .frame(width: 50, height: 50)
-                Text("Something went wrong\nTap to retry")
+                    .frame(width: Constants.Images.iconSize.width,
+                           height: Constants.Images.iconSize.height)
+                Text(Constants.Text.defaultError)
                     .font(.title3)
             }
             .foregroundStyle(.red)

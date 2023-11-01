@@ -18,7 +18,7 @@ struct MoviePosterView: View {
             .placeholder {
                 Image(systemName: "film")
                     .font(.largeTitle)
-                    .opacity(0.3)
+                    .opacity(Constants.Images.opacity)
             }
             .fade(duration: Constants.Animation.duration)
             .resizable()

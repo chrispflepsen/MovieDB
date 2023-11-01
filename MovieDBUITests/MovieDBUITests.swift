@@ -17,7 +17,6 @@ final class MovieDBUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         try app.performAccessibilityAudit()
-
     }
 
     func testDetailAccessibility() throws {

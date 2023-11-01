@@ -27,7 +27,7 @@ struct MovieListContainerView: View {
                 }
             }
         }
-        .navigationTitle("Popular Movies")
+        .navigationTitle(Constants.Text.movieListTitle)
     }
 }
 

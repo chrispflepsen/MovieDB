@@ -19,7 +19,7 @@ struct CastMemberView: View {
                 .placeholder {
                     Image(systemName: "person.circle")
                         .font(.largeTitle)
-                        .opacity(0.3)
+                        .opacity(Constants.Images.opacity)
                 }
                 .fade(duration: Constants.Animation.duration)
                 .resizable()
