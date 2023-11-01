@@ -8,13 +8,13 @@
 import Foundation
 
 /// A struct representing the response for movie credits, including cast members.
-struct CreditsResponse: Decodable {
+struct CreditsResponse: Codable {
     let id: Int
     let cast: [CastMember]
 }
 
 /// A struct representing a cast member in a movie or TV show.
-struct CastMember: Identifiable, Decodable {
+struct CastMember: Identifiable, Codable {
     let adult: Bool
     let gender: Int
     let id: Int
@@ -22,7 +22,7 @@ struct CastMember: Identifiable, Decodable {
     let name: String
     let originalName: String
     let popularity: Float
-    let profilePath: String
+    let profilePath: String?
     let castId: Int
     let character: String
     let creditId: String

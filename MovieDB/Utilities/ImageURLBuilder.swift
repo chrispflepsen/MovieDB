@@ -29,9 +29,10 @@ enum ImageURLBuilder {
     ///
     /// - Returns: A URL pointing to the cast member's profile image or `nil` if the URL construction fails.
     static func buildURLFor(castMember: CastMember) -> URL? {
+        guard let profilePath = castMember.profilePath else { return nil }
         return buildURLFor(baseUrl: Constants.Images.baseUrl,
                            sizePath: Constants.Images.profileSizePath,
-                           imagePath: castMember.profilePath)
+                           imagePath: profilePath)
     }
 
     /// Builds a URL using the provided base URL, size path, and image path.

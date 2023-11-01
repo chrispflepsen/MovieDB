@@ -14,7 +14,7 @@ struct CastMemberView: View {
     let castMember: CastMember
 
     var body: some View {
-        VStack(alignment: .center) {
+        HStack(alignment: .center) {
             KFImage.url(ImageURLBuilder.buildURLFor(castMember: castMember))
                 .placeholder {
                     Image(systemName: "person.circle")
@@ -26,18 +26,21 @@ struct CastMemberView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: Constants.Images.thumbnailSize.width,
                        height: Constants.Images.thumbnailSize.height)
-            Text(castMember.name)
-                .font(.caption)
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-            Text(castMember.character)
-                .font(.caption2)
+            VStack(alignment: .leading,
+                   spacing: Constants.spacing) {
+                Text(castMember.name)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(castMember.character)
+                    .font(.subheadline)
+            }
+            .padding()
         }
-        .frame(maxWidth: 80, maxHeight: .infinity)
     }
 }
 
 #Preview {
-    CastMemberView(castMember: CastMember.castList.first!)
+        CastMemberView(castMember: CastMember.castList.first!)
 }

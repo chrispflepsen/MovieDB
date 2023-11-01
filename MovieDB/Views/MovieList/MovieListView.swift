@@ -20,6 +20,7 @@ struct MovieListView: View {
         }
         .navigationDestination(for: Movie.self) { movie in
             MovieDetailView(movie: movie)
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

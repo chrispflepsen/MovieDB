@@ -10,30 +10,53 @@ import SwiftUI
 /// A View that displays a list of cast members for a movie or show.
 struct CastView: View {
 
-    let cast: [CastMember]
+    var creditsViewModel: CreditsProvider
+
+    init(movie: Movie) {
+        self.creditsViewModel = CreditsViewModel(movie: movie)
+    }
+
+    init(creditsProvider: CreditsProvider) {
+        self.creditsViewModel = creditsProvider
+    }
 
     var body: some View {
-        VStack(alignment: .leading) {
-            Spacer()
-            Text("Cast")
-                .font(.title)
-                .padding()
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(alignment: .top,
-                           spacing: Constants.spacing,
-                           content: {
-                    ForEach(cast) { castMember in
-                        CastMemberView(castMember: castMember)
-                    }
-                })
-                .padding(.horizontal, Constants.padding)
+        switch creditsViewModel.creditsState {
+        case .loading:
+            HStack {
+                Spacer()
+                LoadingView()
+                Spacer()
             }
-            Spacer()
+        case .result(let cast):
+            LazyVStack(alignment: .leading,
+                       content: {
+                ForEach(cast) { castMember in
+                    CastMemberView(castMember: castMember)
+                }
+            })
+        case .error(let error):
+            HStack {
+                Spacer()
+                ErrorView(error: error) {
+                    Task {
+                        await creditsViewModel.fetchCredits()
+                    }
+                }
+                Spacer()
+            }
         }
-        .padding(.vertical, Constants.padding)
     }
 }
 
 #Preview {
-    CastView(cast: CastMember.castList)
+    CastView(creditsProvider: CreditsStub(state: .result(CastMember.castList)))
+}
+
+#Preview {
+    CastView(creditsProvider: CreditsStub(state: .loading))
+}
+
+#Preview {
+    CastView(creditsProvider: CreditsStub(state: .error(PreviewError.generic)))
 }

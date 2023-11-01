@@ -27,7 +27,6 @@ struct MovieListContainerView: View {
                 }
             }
         }
-        .navigationBarTitleDisplayMode(.large)
         .navigationTitle("Popular Movies")
     }
 }

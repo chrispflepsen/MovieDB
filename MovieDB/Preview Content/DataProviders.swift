@@ -16,3 +16,14 @@ class MovieListStub: MovieListProvider {
 
     func fetchMovies() async { }
 }
+
+@Observable
+class CreditsStub: CreditsProvider {
+    var creditsState: CreditViewState
+
+    init(state: CreditViewState) {
+        self.creditsState = state
+    }
+
+    func fetchCredits() async { }
+}

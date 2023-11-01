@@ -6,12 +6,13 @@
 //
 
 import XCTest
+import RestySwift
 @testable import MovieDB
 
 final class MovieListViewModelTests: XCTestCase {
 
     func testFetchMovies() async throws {
-        let viewModel = MovieListViewModel(networkConnector: .single(.success(MovieResult.popular)))
+        let viewModel = MovieListViewModel(connector: .single(.success(MovieResult.popular)))
         await viewModel.fetchMovies()
         switch viewModel.state {
         case .result(let movies):
@@ -23,7 +24,7 @@ final class MovieListViewModelTests: XCTestCase {
     }
 
     func testError() async throws {
-        let viewModel = MovieListViewModel(networkConnector: .single(.error(PreviewError.generic)))
+        let viewModel = MovieListViewModel(connector: .single(.error(PreviewError.generic)))
         await viewModel.fetchMovies()
         switch viewModel.state {
         case .error(let error):
