@@ -21,6 +21,9 @@ enum Constants {
         static let thumbnailSize = CGSize(width: 50, height: 75)
         static let detailSize = CGSize(width: 250, height: 375)
         static let iconSize = CGSize(width: 50, height: 50)
+
+        /// 0.3
+        static let opacity = 0.3
     }
 
     enum Animation {
