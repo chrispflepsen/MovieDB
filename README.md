@@ -11,7 +11,7 @@ The MovieDB Demo App is a sample mobile application designed to showcase popular
 
 ## API Key
 
-### TMDB.json Provided
+### TMDB.json Provided {#file-provided}
 
 If you are provided with a TMDB.json file you will need to drag and drop it on the 
 
@@ -23,11 +23,10 @@ Otherwise to use this app, you will need an API key from [The Movie Database](ht
 2. Sign up for a developer account or log in if you already have one.
 3. Once logged in, create a new application to obtain an API key.
 4. Copy the API key provided and keep it secure.
-5. Create a file named TMDB.json and 
-
+5. Create a file named TMDB.json with the following contents: 
 ```json
 {
-	"apiKey": "API Key goes here"
+  "apiKey": "API Key goes here"
 }
 ```
-
+6. Follow the [TMDB.json Provided instructions](#file-provided)
