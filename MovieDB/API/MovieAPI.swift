@@ -7,7 +7,6 @@
 
 import Foundation
 import RestySwift
-import UIKit
 
 struct APIConfig: Codable {
     let apiKey: String
