@@ -23,6 +23,7 @@ struct MoviePosterView: View {
             .fade(duration: Constants.Animation.duration)
             .resizable()
             .aspectRatio(contentMode: .fit)
+            .accessibilityLabel("\(posterSize.movie.title) \(Constants.Accessibility.moviePoster)")
     }
 }
 

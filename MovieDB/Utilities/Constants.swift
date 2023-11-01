@@ -36,4 +36,8 @@ enum Constants {
         static let castTitle = "Cast"
         static let defaultError = "Something went wrong\nTap to retry"
     }
+
+    enum Accessibility {
+        static let moviePoster = "Movie Poster"
+    }
 }
