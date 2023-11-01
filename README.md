@@ -1,13 +1,13 @@
 # MovieDB
-Demo Movie database app
+The MovieDB Demo App is a sample mobile application designed to showcase popular movies and provide detailed information about selected movies. This app allows users to explore a curated list of popular movies and learn more about their details.
 
 ## Documentation
 
-Full documentation available here: [Documentation](/docs)
+Full documentation available here: [Documentation](https://chrispflepsen.github.io/MovieDB/documentation/moviedb/)
 
-## Overview
+## [RestySwift](https://github.com/chrispflepsen/RestySwift)
 
-The MovieDB Demo App is a sample mobile application designed to showcase popular movies and provide detailed information about selected movies. This app allows users to explore a curated list of popular movies and learn more about their details.
+RestySwift is a barebones protocol based package built on top of URLSession for JSON based REST API(s). It was used in this project for all networking and stubbing of network requests.
 
 ## API Key
 
@@ -31,4 +31,4 @@ Otherwise to use this app, you will need an API key from [The Movie Database](ht
   "apiKey": "API Key goes here"
 }
 ```
-6. Follow the [TMDB.json Provided instructions](#file-provided)
+6. Follow the [File Provided instructions](#file-provided)
